@@ -24,7 +24,7 @@ export default function SearchBox() {
         onChange={(e) => setSearch(e.target.value)}
       />
       <button
-        className="text-amber-600 disabled:text-gray-100"
+        className="rounded-md mt-3 p-2 font-semibold bg-amber-600 hover:bg-amber-700 disabled:bg-gray-700 disabled:text-gray-400"
         disabled={search === ""}
       >
         Search

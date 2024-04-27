@@ -13,17 +13,22 @@ export default function Card({ result }) {
           }`}
           width={500}
           height={300}
-          alt=""
+          style={{
+            maxWidth: "100%",
+            maxHeight: "160px",
+            objectFit: "scale-down",
+          }}
+          alt="Not available"
           className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300"
         ></Image>
         <div className="p-2">
           <p className="line-clamp-2 text-md">{result.overview}</p>
-          <h2 className="text-lg font-bold truncate">
+          <h2 className="text-lg font-bold truncate text-amber-500">
             {result.title || result.name}
           </h2>
           <p className="flex items-center">
             {result.release_date || result.first_air_date}
-            <FiThumbsUp className="h-5 mr-1 ml-3" />
+            <FiThumbsUp className="h-5 mr-1 ml-3 text-cyan-400" />
             {result.vote_count}
           </p>
         </div>
