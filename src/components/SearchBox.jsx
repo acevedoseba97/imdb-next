@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { CiSearch } from "react-icons/ci";
 
 export default function SearchBox() {
   const [search, setSearch] = useState("");
@@ -24,10 +25,10 @@ export default function SearchBox() {
         onChange={(e) => setSearch(e.target.value)}
       />
       <button
-        className="rounded-md mt-3 p-2 font-semibold bg-amber-600 hover:bg-amber-700 disabled:bg-gray-700 disabled:text-gray-400"
+        className="mr-4 text-2xl font-bold text-amber-600 disabled:text-gray-400"
         disabled={search === ""}
       >
-        Search
+        <CiSearch />
       </button>
     </form>
   );
